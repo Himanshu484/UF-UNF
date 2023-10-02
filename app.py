@@ -20,6 +20,13 @@ data = pd.read_csv('https://raw.githubusercontent.com/Himanshu484/UF-UNF/main/as
 df_UF_UNF = pd.read_csv("https://raw.githubusercontent.com/Himanshu484/UF-UNF/main/assets/node_list.csv")
 df_UF_UNF_Network = pd.read_csv("https://raw.githubusercontent.com/Himanshu484/UF-UNF/main/assets/edge_list.csv")
 
+connections = []
+for i in range(len(data)):
+    target_list = df_UF_UNF_Network[df_UF_UNF_Network["source"] == data["researcher_id"][i]]["target"].to_list()
+    index = data[data["researcher_id"].isin(target_list)].index.to_list()
+    for j in index:
+        connections.append((i,j))
+
 # Define your scatter plot
 fig = px.scatter(data, x='x', y='y', color="affiliation", size="size",
                  color_discrete_map={'Area1': 'red', 'Area2': 'blue', 'Area3': 'green', 'Area4': 'purple'},
