@@ -16,9 +16,9 @@ app = app.server
 
 
 
-data = pd.read_csv('Himanshu484/UF-UNF/assets/nodes_new.csv',index=False)
-df_UF_UNF = pd.read_csv("Himanshu484/UF-UNF/assets/node_list.csv",index=False)
-df_UF_UNF_Network = pd.read_csv("Himanshu484/UF-UNF/assets/edge_list.csv",index=False)
+data = pd.read_csv('Himanshu484/UF-UNF/assets/nodes_new.csv')
+df_UF_UNF = pd.read_csv("Himanshu484/UF-UNF/assets/node_list.csv")
+df_UF_UNF_Network = pd.read_csv("Himanshu484/UF-UNF/assets/edge_list.csv")
 
 # Define your scatter plot
 fig = px.scatter(data, x='x', y='y', color="affiliation", size="size",
