@@ -12,6 +12,7 @@ from dash.dependencies import Input, Output
 
 # Create a Dash application
 app = dash.Dash(__name__)
+app = app.server
 
 data = pd.read_csv('assets/nodes_new.csv',index=False)
 df_UF_UNF = pd.read_csv("assets/node_list.csv",index=False)
