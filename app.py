@@ -14,9 +14,11 @@ from dash.dependencies import Input, Output
 app = dash.Dash(__name__)
 app = app.server
 
-data = pd.read_csv('assets/nodes_new.csv',index=False)
-df_UF_UNF = pd.read_csv("assets/node_list.csv",index=False)
-df_UF_UNF_Network = pd.read_csv("assets/edge_list.csv",index=False)
+
+
+data = pd.read_csv('Himanshu484/UF-UNF/assets/nodes_new.csv',index=False)
+df_UF_UNF = pd.read_csv("Himanshu484/UF-UNF/assets/node_list.csv",index=False)
+df_UF_UNF_Network = pd.read_csv("Himanshu484/UF-UNF/assets/edge_list.csv",index=False)
 
 # Define your scatter plot
 fig = px.scatter(data, x='x', y='y', color="affiliation", size="size",
