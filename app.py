@@ -12,7 +12,7 @@ from dash.dependencies import Input, Output
 
 # Create a Dash application
 app = dash.Dash(__name__)
-app = app.server
+server = app.server
 
 
 
